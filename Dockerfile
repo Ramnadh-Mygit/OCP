@@ -1,12 +1,14 @@
 FROM node:14
 
 WORKDIR /usr/src/app
-RUN chmod -R 777 public
 
 COPY package.json ./
 RUN npm install
 
 COPY . .
+
+RUN ls -l
+RUN chmod -R 777 public
 
 EXPOSE 8080
 
