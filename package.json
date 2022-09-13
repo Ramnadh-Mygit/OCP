@@ -6,7 +6,7 @@
     "prestart": "./bin/env.sh > ./public/env.js",
     "start": "node server.js"
   },
-  "dependencies": {
+  "dependencies":  {
     "express": "*"
   }
 }
