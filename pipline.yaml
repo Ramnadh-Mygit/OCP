@@ -11,22 +11,22 @@ spec:
     requests:
       storage: 10Gi
 ---
-apiVersion: v1
-kind: Pod
-metadata:
-   name: sourcepod
-   namespace: nallaramnath
-spec:
-   volumes:
-    - name: jenkins
-      persistentVolumeClaim:
-         claimName: pipline
-   containers:
-    - name: task-pv-container
-      image: nginx
-      ports:
-       - containerPort: 80
-         name: "http-server"
-      volumeMounts:
-       - name: jenkins
-         mountPath: /var/lib/jenkins
+# apiVersion: v1
+# kind: Pod
+# metadata:
+#    name: sourcepod
+#    namespace: nallaramnath
+# spec:
+#    volumes:
+#     - name: jenkins
+#       persistentVolumeClaim:
+#          claimName: pipline
+#    containers:
+#     - name: task-pv-container
+#       image: nginx
+#       ports:
+#        - containerPort: 80
+#          name: "http-server"
+#       volumeMounts:
+#        - name: jenkins
+#          mountPath: /var/lib/jenkins
